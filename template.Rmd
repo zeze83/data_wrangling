@@ -121,3 +121,25 @@ pulse_df =
   read_sas("data/public_pulse_data.sas7bdat")
 ```
 
+## Base R
+
+```{r, eval = FALSE}
+litters_df =
+    read_csv("data/FAS_litters.csv")
+
+litters_df$Group
+```
+
+## Exporting data
+
+```{r}
+litters_df_cleaned =
+    read_csv("data/FAS_litters.csv")
+
+litters_df_cleaned =
+    janitor::clean_names(litters_df_cleaned)
+
+write_csv(litters_df_cleaned,"data/litters_cleaned.csv")
+```
+
+
