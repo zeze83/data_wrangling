@@ -116,3 +116,16 @@ mutate(litters_df,
        group = str_to_lower(group))
 ```
 
+
+
+## `arrange`
+
+`arrange()` is sort variables; arrange the rows in your data according to the values in one or more columns.
+
+```{r}
+arrange(litters_df, gd0_weight)
+arrange(litters_df, group, gd0_weight)
+```
+
+
+
