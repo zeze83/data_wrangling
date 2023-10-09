@@ -15,6 +15,22 @@ full join keeps everthing; ?=bind_rows
 
 ```{r}
 library(tidyverse)
-library(readr)
+```
+
+## PULSE data
+
+```{r}
+pulse_df = 
+  haven::read_sas("data/public_pulse_data.sas7bdat") |>
+  janitor::clean_names() |>
+  pivot_longer(
+    bdi_score_bl:bdi_score_12m,
+    names_to = "visits",
+    values_to = "bdi_score",
+    names_prefix = "bdi_score_" #delete qianzhui
+  ) |>
+  mutate(
+    visits = replace(visits, visits == "bl", "00m")
+  ) 
 ```
 
