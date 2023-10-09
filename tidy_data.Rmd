@@ -1,0 +1,20 @@
+---
+title: "dplyr"
+author: "Ze Li"
+date: "2023-09-26"
+output: github_document
+---
+
+inner join keeps the the same
+
+left join keeps the the same as the 1st has & drops Na in the 2nd; 
+
+right join keeps the the same as the 2nd has & drops Na in the 1st; 
+
+full join keeps everthing; ?=bind_rows
+
+```{r}
+library(tidyverse)
+library(readr)
+```
+

@@ -48,6 +48,8 @@ select(litters_df, group, litter_id = litter_number, everything())
 select(litters_df, gd0_weight, everything())
 ```
 
+# rename & relocate
+
 ```{r}
 rename(litters_df, litter_id = litter_number)
 
